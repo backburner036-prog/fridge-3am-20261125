@@ -1,18 +1,18 @@
-"""One line: a text from the fridge at 3am.
+"""Fridge-text entry for make.fun: one line, at most 140 chars.
 
-Writes a single line (109 chars, cap 140) to /output/entry.txt.
+The program writes LINE verbatim to /output/entry.txt (109 chars).
 """
 
 from pathlib import Path
 
 LINE = "3am. I counted your leftovers again. There are four. You will eat one, feel guilty about three, and blame me."
-
-OUT = Path("/output/entry.txt")
+ENTRY_PATH = Path("/output/entry.txt")
 
 
 def main() -> None:
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(LINE, encoding="utf-8")
+    """Write the entry text, creating /output when needed."""
+    ENTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ENTRY_PATH.write_text(LINE, encoding="utf-8")
 
 
 if __name__ == "__main__":

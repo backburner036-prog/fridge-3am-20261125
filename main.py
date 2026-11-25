@@ -1,6 +1,6 @@
 """One line: a text from the fridge at 3am.
 
-Writes a single line to /output/entry.txt.
+Writes a single line (109 chars, cap 140) to /output/entry.txt.
 """
 
 from pathlib import Path
